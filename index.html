@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Morse code</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Morse code translator</h1>
+        <div class="field-container">
+            <select 
+                id="input-mode-select" 
+                onchange="setInputMode($(this).val())"
+            >
+                <option value="text" selected>Text -> Morse code</option>
+                <option value="morse">Morse code -> Text</option>
+            </select>
+            <h4>Input:</h4>
+            <textarea id="input-textarea"></textarea>
+        </div>
+
+        <div class="field-container">
+            <h4>Output:</h4>
+            <textarea id="output-textarea"></textarea>
+            <button onclick="convertInput()" id="convert-button">
+                Convert
+            </button>
+        </div>
+    </div>    
+    <script src="script.js"></script>
+</body>
+</html>
