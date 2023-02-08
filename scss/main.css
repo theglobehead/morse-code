@@ -8,12 +8,26 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  min-height: 100vh;
+  width: -moz-fit-content;
+  width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 20px;
+  min-width: 100%;
+  min-height: 100vh;
+  padding: 20px 90px;
   box-sizing: border-box;
+}
+
+.github-a {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  border-radius: 90%;
+}
+.github-a img {
+  width: 50px;
+  height: 50px;
 }
 
 .container {
