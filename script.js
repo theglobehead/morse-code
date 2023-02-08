@@ -45,8 +45,10 @@ let textToMorseDict = {
     " ": "/",
 }
 
-function setInputMode(mode){
-    inputMode = mode
+function setInputMode($inputModeContainer){
+    $inputModeContainer.find(".option").toggleClass("selected")
+
+    inputMode = $inputModeContainer.find(".option.selected:first").attr("value")
 }
 
 function getKeyByValue(object, value) {

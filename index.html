@@ -5,30 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geo&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/scss/main.css">
     <title>Morse code</title>
 </head>
 <body>
     <div class="container">
         <h1>Morse code translator</h1>
+
+        <div class="input-mode-container">
+            <div class="option selected" value="text">
+                Text -> Morse code
+            </div>
+            <div class="option" value="morse">
+                Morse code -> Text
+            </div>
+            <img class="switch" src="/media/switch.svg" onclick="setInputMode($(this).parent())">
+        </div>
+
         <div class="field-container">
-            <select 
-                id="input-mode-select" 
-                onchange="setInputMode($(this).val())"
-            >
-                <option value="text" selected>Text -> Morse code</option>
-                <option value="morse">Morse code -> Text</option>
-            </select>
             <h4>Input:</h4>
-            <textarea id="input-textarea"></textarea>
+            <textarea class="textarea" id="input-textarea"></textarea>
         </div>
 
         <div class="field-container">
             <h4>Output:</h4>
-            <textarea id="output-textarea"></textarea>
-            <button onclick="convertInput()" id="convert-button">
-                Convert
-            </button>
+            <textarea class="textarea" id="output-textarea"></textarea>
         </div>
+
+        <div onclick="convertInput()" id="convert-button">
+            Convert
+        </button>
     </div>    
     <script src="script.js"></script>
 </body>
