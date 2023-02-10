@@ -2,7 +2,7 @@ body {
   font-family: "Geo", sans-serif;
   margin: 0;
   background-color: #000;
-  background-image: url("/media/black-background.gif");
+  background-image: url("../media/black-background.gif");
   background-size: cover;
   color: #ffffff;
   display: flex;
@@ -70,6 +70,7 @@ body {
 }
 .container .field-container h4 {
   margin: 0;
+  margin-bottom: 7px;
 }
 .container .field-container .textarea {
   min-width: 100%;

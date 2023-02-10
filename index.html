@@ -28,7 +28,7 @@
             <div class="option" value="morse">
                 Morse code -> Text
             </div>
-            <img class="switch" src="/media/switch.svg" onclick="setInputMode($(this).parent())">
+            <img class="switch" src="/media/switch.svg" onclick="setInputMode()">
         </div>
 
         <div class="field-container">
@@ -38,7 +38,7 @@
 
         <div class="field-container">
             <h4>Output:</h4>
-            <textarea class="textarea" id="output-textarea"></textarea>
+            <textarea class="textarea" id="output-textarea" readonly autocomplete="off"></textarea>
         </div>
 
         <div onclick="convertInput()" id="convert-button">

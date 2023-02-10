@@ -1,9 +1,9 @@
-let $inputModeSelect = $("#input-mode-select")
 let $inputTextarea = $("#input-textarea")
 let $outputTextarea = $("#output-textarea")
 let $convertButton = $("#convert-button")
+let $inputModeContainer = $(".input-mode-container:first") 
 
-let inputMode = $inputModeSelect.val() 
+let inputMode = "text"
 
 let textToMorseDict = {
     "a": "._",
@@ -45,10 +45,14 @@ let textToMorseDict = {
     " ": "/",
 }
 
-function setInputMode($inputModeContainer){
+function setInputMode(){
+    convertInput()
     $inputModeContainer.find(".option").toggleClass("selected")
-
     inputMode = $inputModeContainer.find(".option.selected:first").attr("value")
+
+    let inputTextareaVal = $inputTextarea.val()
+    $inputTextarea.val($outputTextarea.val())
+    $outputTextarea.val(inputTextareaVal)
 }
 
 function getKeyByValue(object, value) {
@@ -59,13 +63,13 @@ function convertInput(){
     let inputText = $inputTextarea.val()
     let result = ""
 
-    if(inputMode == "text"){
+    if(inputMode === "text"){
         result = textToMorse(inputText)
     }else{
         result = morseToText(inputText)
     }
 
-    $outputTextarea.text(result)
+    $outputTextarea.val(result)
 }
 
 function morseToText(text){
