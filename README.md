@@ -1,9 +1,11 @@
 # morse-code
 
+Here is the link to the site: https://theglobehead.github.io/morse-code/  
+
 ## About
 
-This is a simple sate for my programming class.
-It depends on scss an jquery.
+This is a simple sate for my programming class.  
+It depends on scss an jquery.  
 
 ## To run the site locally:
 
